@@ -1,0 +1,10 @@
+**/*.d.ts
+**/*.js
+**/*.js.map
+**/*.tgz
+
+node_modules
+dist
+
+**/*.lock
+**/*.log
