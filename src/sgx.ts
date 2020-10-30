@@ -3,7 +3,6 @@ import {
     bytes as by,
     u16, u32, u64,
     toU16, toU32, toU64,
-    parseHex,
 } from "./types";
 
 export const SGX_FLAGS_INITTED = 0x0000_0001;

@@ -313,16 +313,17 @@ export class AttestationVerifier {
         return this;
     }
 
-    /// Check maximum age of the IAS report (using report's timestamp).
-    public max_age(age: duration.Duration): AttestationVerifier {
+    /// Check maximum age (in seconds) of the IAS report (using report's timestamp).
+    public max_age(age: number): AttestationVerifier {
         if (!this.valid()) {
             return this;
         }
 
         try {
             let ts = Date.parse(this.report.timestamp);
+            let dur = dayjs.duration({ seconds: age });
             let now = dayjs.utc().toDate().getTime();
-            if (ts + age.asMilliseconds() < now) {
+            if (ts + dur.asMilliseconds() < now) {
                 this.result = {
                     verdict: AttestationVerdict.InvalidIasReport,
                     message: "IAS response is too old",

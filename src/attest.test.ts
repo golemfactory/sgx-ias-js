@@ -1,8 +1,8 @@
-const dayjs = require("dayjs");
-const duration = require("dayjs/plugin/duration");
+import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
 import { parseHex, toU16 } from "./types";
 import { parse_measurement } from "./sgx";
-import { AttestationVerdict, AttestationVerifier } from "./index";
+import { AttestationVerdict, AttestationVerifier } from "./attest";
 
 dayjs.extend(duration);
 
@@ -130,7 +130,7 @@ test('debug', () => {
 });
 
 test('age', () => {
-    let result = verifier().max_age(dayjs.duration({ minutes: 1 })).verify();
+    let result = verifier().max_age(60).verify();
     expect(result.verdict).not.toEqual(AttestationVerdict.Ok);
 });
 

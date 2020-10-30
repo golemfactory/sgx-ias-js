@@ -1,13 +1,14 @@
 {
   "name": "sgx-ias-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Golem Factory <contact@golem.network>",
   "description": "Attestation Service client for Intel® SGX",
   "license": "LGPL-3.0",
 
-  "main": "src/index.js",
+  "main": "index.js",
   "types": "src/**/*.d.ts",
   "files": [
+    "index.*",
     "src/**/*.js",
     "src/**/*.js.map",
     "src/**/*.ts",
