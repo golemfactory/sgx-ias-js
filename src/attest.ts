@@ -10,7 +10,7 @@ import * as ty from "./types";
 dayjs.extend(duration);
 dayjs.extend(utc);
 
-const IAS_PUBLIC_KEY_PEM: string = `
+export const IAS_PUBLIC_KEY_PEM: string = `
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqXot4OZuphR8nudFrAFi
 aGxxkgma/Es/BA+tbeCTUR106AL1ENcWA4FX3K+E9BBL0/7X5rj5nIgX/R/1ubhk
