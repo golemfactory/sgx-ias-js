@@ -1,10 +1,9 @@
 {
   "name": "sgx-ias-js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Golem Factory <contact@golem.network>",
   "description": "Attestation Service client for Intel® SGX",
   "license": "LGPL-3.0",
-
   "main": "index.js",
   "types": "src/**/*.d.ts",
   "files": [
@@ -14,14 +13,14 @@
     "src/**/*.ts",
     "src/**/*.d.ts"
   ],
-
   "scripts": {
-    "clean": "tsc --build tsconfig.json --clean && rm -f sgx-ias-js*.tgz",
+    "clean": "tsc --build tsconfig.json --clean && rm -f sgx-ias-js*.tgz && rm -rf _bundles",
     "build": "tsc",
     "dist": "yarn clean && yarn build && yarn pack --prod",
+    "pack": "yarn build && webpack",
+    "pack-base": "yarn build && webpack -c webpack.config.basic.js",
     "test": "jest"
   },
-
   "dependencies": {
     "axios": "~0.19.2",
     "dayjs": "~1.9.1",
@@ -29,7 +28,6 @@
     "js-sha512": "~0.7.0",
     "jsrsasign": "~10.0.4"
   },
-
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
@@ -42,6 +40,8 @@
     "ts-jest": "26.4.0",
     "ts-node": "9.0.0",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0"
   }
 }
