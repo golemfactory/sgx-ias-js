@@ -22,7 +22,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "~0.19.2",
+    "axios": "^0.21.1",
     "dayjs": "~1.9.1",
     "js-base64": "^3.5.2",
     "js-sha512": "~0.7.0",
