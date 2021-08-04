@@ -1,6 +1,6 @@
 {
   "name": "sgx-ias-js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Golem Factory <contact@golem.network>",
   "description": "Attestation Service client for Intel® SGX",
   "license": "LGPL-3.0",
